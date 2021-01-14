@@ -1,5 +1,5 @@
 import { html, TemplateResult } from 'lit-html';
-import '../yooda-comp.js';
+import '../yooda-comp';
 
 export default {
   title: 'YoodaComp',

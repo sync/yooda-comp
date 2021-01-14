@@ -1,5 +1,5 @@
 import { html, LitElement, property } from 'lit-element';
-import { styles } from './styles.js';
+import { styles } from './styles';
 
 export class YoodaComp extends LitElement {
   static styles = [styles];

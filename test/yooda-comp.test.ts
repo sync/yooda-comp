@@ -1,7 +1,7 @@
 import { html, fixture, expect } from '@open-wc/testing';
 
-import { YoodaComp } from '../src/YoodaComp.js';
-import '../yooda-comp.js';
+import { YoodaComp } from '../src/YoodaComp';
+import '../yooda-comp';
 
 describe('YoodaComp', () => {
   it('has a default title "Hey there" and counter 5', async () => {

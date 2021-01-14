@@ -1,1 +1,1 @@
-export { YoodaComp } from './src/YoodaComp.js';
+export { YoodaComp } from './src/YoodaComp';

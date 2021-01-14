@@ -1,3 +1,3 @@
-import { YoodaComp } from './src/YoodaComp.js';
+import { YoodaComp } from './src/YoodaComp';
 
 window.customElements.define('yooda-comp', YoodaComp);
