@@ -1,13 +1,8 @@
-import { html, css, LitElement, property } from 'lit-element';
+import { html, LitElement, property } from 'lit-element';
+import { styles } from './styles.js';
 
 export class YoodaComp extends LitElement {
-  static styles = css`
-    :host {
-      display: block;
-      padding: 25px;
-      color: var(--yooda-comp-text-color, #000);
-    }
-  `;
+  static styles = [styles];
 
   @property({ type: String }) title = 'Hey there';
 
@@ -19,8 +14,8 @@ export class YoodaComp extends LitElement {
 
   render() {
     return html`
-      <h2>${this.title} Nr. ${this.counter}!</h2>
-      <button @click=${this.__increment}>increment</button>
+      <h2 class="bg-red-400">${this.title} Nr. ${this.counter}!</h2>
+      <button class="bg-blue-400" @click=${this.__increment}>increment</button>
     `;
   }
 }

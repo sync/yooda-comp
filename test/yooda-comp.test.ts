@@ -19,7 +19,9 @@ describe('YoodaComp', () => {
   });
 
   it('can override the title via attribute', async () => {
-    const el = await fixture<YoodaComp>(html`<yooda-comp title="attribute title"></yooda-comp>`);
+    const el = await fixture<YoodaComp>(
+      html`<yooda-comp title="attribute title"></yooda-comp>`
+    );
 
     expect(el.title).to.equal('attribute title');
   });
