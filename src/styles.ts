@@ -1,6 +1,4 @@
-import { css } from 'lit-element';
+import { unsafeCSS } from 'lit-element';
+import styles from './styles.css';
 
-export const styles = css`
-  @tailwind base;
-  @tailwind utilities;
-`;
+export default unsafeCSS(styles);

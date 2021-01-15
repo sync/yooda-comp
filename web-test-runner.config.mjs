@@ -1,29 +1,18 @@
-// import { playwrightLauncher } from '@web/test-runner-playwright';
+import { esbuildPlugin } from '@web/dev-server-esbuild';
+import { fromRollup } from '@web/dev-server-rollup';
+import rollupPostcss from 'rollup-plugin-postcss';
+
+const postcss = fromRollup(rollupPostcss);
 
 export default /** @type {import("@web/test-runner").TestRunnerConfig} */ ({
-  files: 'dist/test/**/*.test.js',
+  files: 'test/**/*.test.ts',
   nodeResolve: true,
+  mimeTypes: {
+    '**/*.css': 'js',
+  },
 
-  /** Compile JS for older browsers. Requires @web/dev-server-esbuild plugin */
-  // esbuildTarget: 'auto',
-
-  /** Confgure bare import resolve plugin */
-  // nodeResolve: {
-  //   exportConditions: ['browser', 'development']
-  // },
-
-  /** Amount of browsers to run concurrently */
-  // concurrentBrowsers: 2,
-
-  /** Amount of test files per browser to test concurrently */
-  // concurrency: 1,
-
-  /** Browsers to run tests on */
-  // browsers: [
-  //   playwrightLauncher({ product: 'chromium' }),
-  //   playwrightLauncher({ product: 'firefox' }),
-  //   playwrightLauncher({ product: 'webkit' }),
-  // ],
-
-  // See documentation for all available options
+  plugins: [
+    esbuildPlugin({ ts: true }),
+    postcss({ include: ['src/**/*.css'], inject: false }),
+  ],
 });

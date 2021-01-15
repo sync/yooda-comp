@@ -1,29 +1,29 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en-GB">
-<head>
-  <meta charset="utf-8">
-  <style>
-    body {
-      background: #fafafa;
-    }
-  </style>
-</head>
-<body>
-  <div id="demo"></div>
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      body {
+        background: #fafafa;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="demo"></div>
 
-  <script type="module">
-    import { html, render } from 'lit-html';
-    import '../dist/yooda-comp.js';
+    <script type="module">
+      import { html, render } from 'lit-html';
+      import '../yooda-comp.ts';
 
-    const title = 'Hello owc World!';
-    render(
-      html`
-        <yooda-comp .title=${title}>
-          some more light-dom
-        </yooda-comp>
-      `,
-      document.querySelector('#demo')
-    );
-  </script>
-</body>
+      const title = 'Hello owc World!';
+      render(
+        html`
+          <yooda-comp as="span" .title=${title}>
+            some more light-dom
+          </yooda-comp>
+        `,
+        document.querySelector('#demo')
+      );
+    </script>
+  </body>
 </html>

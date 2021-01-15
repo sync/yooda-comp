@@ -18,6 +18,13 @@ describe('YoodaComp', () => {
     expect(el.counter).to.equal(6);
   });
 
+  it('can check the box', async () => {
+    const el = await fixture<YoodaComp>(html`<yooda-comp></yooda-comp>`);
+    el.shadowRoot!.querySelector('input')!.click();
+
+    expect(el.checked).to.equal(true);
+  });
+
   it('can override the title via attribute', async () => {
     const el = await fixture<YoodaComp>(
       html`<yooda-comp title="attribute title"></yooda-comp>`
@@ -29,6 +36,6 @@ describe('YoodaComp', () => {
   it('passes the a11y audit', async () => {
     const el = await fixture<YoodaComp>(html`<yooda-comp></yooda-comp>`);
 
-    await expect(el).shadowDom.to.be.accessible();
+    expect(el).shadowDom.to.be.accessible();
   });
 });
