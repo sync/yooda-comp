@@ -44,7 +44,7 @@ const outputFormat = format => {
 /** @type {(format: 'es' | 'cjs' | 'dts') => import('rollup').Plugin[]} */
 const plugins = format => {
   if (format === 'dts') {
-    return [postcss(postCssConfig), dts()];
+    return [dts()];
   }
 
   const allPlugins = [esbuild(), postcss(postCssConfig), commonjs(), resolve()];
