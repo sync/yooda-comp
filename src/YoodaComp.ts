@@ -1,5 +1,6 @@
 import { html, LitElement, property } from 'lit-element';
 import { asStatic, asTag } from 'static-params';
+import { spread } from '@open-wc/lit-helpers';
 import styles from './styles';
 
 const shtml = asTag(html);
@@ -24,13 +25,30 @@ export class YoodaComp extends LitElement {
     this.checked = checked;
   }
 
+  __buildSpreadAttributes() {
+    const spreadAttributeNames = this.getAttributeNames().filter(
+      attribute =>
+        !['title', 'counter', 'checked', 'as', 'style'].includes(attribute)
+    );
+
+    const spreadAttributes = spreadAttributeNames.reduce(
+      (attributes, name) => ({
+        ...attributes,
+        [name]: this.getAttribute(name),
+      }),
+      {}
+    );
+
+    return spreadAttributes;
+  }
+
   render() {
     const tag = asStatic(this.as);
 
     return shtml`
-    <${tag}>
+    <${tag} ...=${spread(this.__buildSpreadAttributes())}>
       <h1 class="bg-red-400">${this.title} Nr. ${this.counter}!</h1>
-      <button class="bg-blue-400" @click=${this.__increment}>increment</button>
+      <button class="bg-green-400" @click=${this.__increment}>increment</button>
       <div>
         <input
           type="checkbox"

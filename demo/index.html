@@ -18,7 +18,13 @@
       const title = 'Hello owc World!';
       render(
         html`
-          <yooda-comp as="span" .title=${title}>
+          <yooda-comp
+            as="span"
+            .title=${title}
+            some="test"
+            id="abc"
+            class="flex flex-row space-x-3"
+          >
             some more light-dom
           </yooda-comp>
         `,
