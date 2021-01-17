@@ -59,7 +59,7 @@ const plugins = format => {
 
 /** @type {(format: 'es' | 'cjs' | 'dts') => import('rollup').RollupOptions} */
 const bundle = format => ({
-  input: 'yooda-comp.ts',
+  input: 'src/index.ts',
   output: {
     file: `${filename}.${ext(format)}`,
     format: outputFormat(format),

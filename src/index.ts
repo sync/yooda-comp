@@ -1,0 +1,1 @@
+export { YoodaComp } from './YoodaComp';

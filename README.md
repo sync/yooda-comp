@@ -12,7 +12,7 @@ npm i yooda-comp
 
 ```html
 <script type="module">
-  import 'yooda-comp/yooda-comp.js';
+  import 'yooda-comp/dist/index.js';
 </script>
 
 <yooda-comp></yooda-comp>

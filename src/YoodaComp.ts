@@ -1,10 +1,11 @@
-import { html, LitElement, property } from 'lit-element';
+import { customElement, html, LitElement, property } from 'lit-element';
 import { asStatic, asTag } from 'static-params';
 import { spread } from '@open-wc/lit-helpers';
 import styles from './styles';
 
 const shtml = asTag(html);
 
+@customElement('yooda-comp')
 export class YoodaComp extends LitElement {
   static styles = [styles];
 
@@ -61,5 +62,11 @@ export class YoodaComp extends LitElement {
       </div>
     </${tag}>
     `;
+  }
+}
+
+declare global {
+  interface HTMLElementTagNameMap {
+    'yooda-comp': YoodaComp;
   }
 }
