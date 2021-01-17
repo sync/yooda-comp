@@ -34,7 +34,7 @@
     "@open-wc/lit-helpers": "0.3.12",
     "@open-wc/testing": "2.5.32",
     "@rollup/plugin-commonjs": "17.0.0",
-    "@rollup/plugin-node-resolve": "11.0.1",
+    "@rollup/plugin-node-resolve": "11.1.0",
     "@stylelint/postcss-css-in-js": "0.37.2",
     "@typescript-eslint/eslint-plugin": "4.13.0",
     "@typescript-eslint/parser": "4.13.0",
