@@ -5,6 +5,7 @@ import { terser } from 'rollup-plugin-terser';
 import postcss from 'rollup-plugin-postcss';
 import commonjs from '@rollup/plugin-commonjs';
 import resolve from '@rollup/plugin-node-resolve';
+import copy from 'rollup-plugin-copy';
 
 const filesizeConfig = {
   showGzippedSize: true,
@@ -14,6 +15,10 @@ const filesizeConfig = {
 
 const postCssConfig = {
   inject: false,
+};
+
+const copyConfig = {
+  targets: [{ src: 'public/fonts', dest: 'dist' }],
 };
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires
@@ -47,7 +52,13 @@ const plugins = format => {
     return [dts()];
   }
 
-  const allPlugins = [esbuild(), postcss(postCssConfig), commonjs(), resolve()];
+  const allPlugins = [
+    esbuild(),
+    postcss(postCssConfig),
+    commonjs(),
+    resolve(),
+    copy(copyConfig),
+  ];
 
   if (process.env.NODE_ENV === 'production') {
     allPlugins.push(terser());
@@ -67,7 +78,13 @@ const bundle = format => ({
     name: 'YodaComp',
   },
   plugins: plugins(format),
-  external: [],
+  external: [
+    '@open-wc/lit-helpers',
+    'lit-element',
+    'lit-html',
+    'static-params',
+    'style-inject',
+  ],
 });
 
 export default [

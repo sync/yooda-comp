@@ -1,5 +1,8 @@
 import { html, TemplateResult } from 'lit-html';
-import '../src/index';
+import { setupReset } from '../src/reset';
+import '../src/YoodaComp';
+
+setupReset();
 
 export default {
   title: 'YoodaComp',
