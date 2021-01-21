@@ -1113,10 +1113,10 @@
   resolved "https://registry.yarnpkg.com/@open-wc/dedupe-mixin/-/dedupe-mixin-1.3.0.tgz#0df5d438285fc3482838786ee81895318f0ff778"
   integrity sha512-UfdK1MPnR6T7f3svzzYBfu3qBkkZ/KsPhcpc3JYhsUY4hbpwNF9wEQtD4Z+/mRqMTJrKg++YSxIxE0FBhY3RIw==
 
-"@open-wc/dev-server-hmr@0.1.0":
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/@open-wc/dev-server-hmr/-/dev-server-hmr-0.1.0.tgz#f432ddfe8340928e4fdf906d71e7dfd33a798a29"
-  integrity sha512-rAb7CfHoJtEFCUjLyN8Owbe2vx1Yrx/LixLRE8cjWtp1CpSP7Ux/OG/Cz8TNGeWn4lnMjC1Vfk7c1EsPA53yow==
+"@open-wc/dev-server-hmr@0.1.1":
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/@open-wc/dev-server-hmr/-/dev-server-hmr-0.1.1.tgz#b3e1d22e71861022e52e2614ea8e46a41a444f58"
+  integrity sha512-Uz2iVLRKs940+rwQAwe1MPGOceyQALshsKVG3ooq8xZYA7wND0w/1c/tLgDZUZ6uzRrcZ9DhkfAIwCAJp8K02w==
   dependencies:
     "@babel/core" "^7.12.3"
     "@babel/plugin-proposal-class-properties" "^7.12.1"

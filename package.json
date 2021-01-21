@@ -29,7 +29,7 @@
     "@babel/core": "7.12.10",
     "@babel/eslint-parser": "7.12.1",
     "@babel/eslint-plugin": "7.12.1",
-    "@open-wc/dev-server-hmr": "0.1.0",
+    "@open-wc/dev-server-hmr": "0.1.1",
     "@open-wc/eslint-config": "4.2.0",
     "@open-wc/lit-helpers": "0.3.12",
     "@open-wc/testing": "2.5.32",
